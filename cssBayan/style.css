@@ -1,0 +1,53 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 300;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+	background: blanchedalmond
+}
+.wrapper {
+width: 100%;
+}
+#accordion {
+    margin:100px auto;
+    padding:0;
+    width:50%;
+    }    
+#accordion li {
+    list-style:none;
+    width:100%;
+    }    
+#accordion  li label {
+    padding:10px;
+    display:block;
+    font-size:30px;
+    line-height:30px;
+    color:#121212;
+    background-color:#d1d9df;
+    border-bottom: solid 8px blanchedalmond;
+    }    
+/* Hide the radio buttons */
+#accordion label + input[type='radio'] {
+      display: none;
+}    
+/* hide content by default */
+#accordion .content {
+    display:none;
+    padding:10px;
+    font-size:19px;
+    line-height:26px;
+    background-color:#e5ece8;
+}
+/* Show content boxes when the radio buttons are checked */
+#accordion label + input[type='radio']:checked + .content {
+    display:block;
+}
+
+
