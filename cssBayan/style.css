@@ -1,38 +1,57 @@
+* {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
 body {
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Slab', serif;
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 700;
     min-height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 	background: blanchedalmond
 }
 .wrapper {
 width: 100%;
 }
+
+.accordion_wrapper {
+    width: 40%; 
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
 #accordion {
-    margin:100px auto;
     padding:0;
-    width:50%;
     }    
 #accordion li {
     list-style:none;
     width:100%;
     }    
 #accordion  li label {
-    padding:10px;
+    padding: 1em;
     display:block;
-    font-size:30px;
-    line-height:30px;
-    color:#121212;
-    background-color:#d1d9df;
-    border-bottom: solid 8px blanchedalmond;
+    font-size: 1em;
+    border-top: solid 1px rgb(104, 101, 101);
+    color:hsl(212, 90%, 65%);
     }    
+
+   
 /* Hide the radio buttons */
 #accordion label + input[type='radio'] {
       display: none;
@@ -40,14 +59,21 @@ width: 100%;
 /* hide content by default */
 #accordion .content {
     display:none;
-    padding:10px;
-    font-size:19px;
-    line-height:26px;
-    background-color:#e5ece8;
 }
+
+/*#accordion label:hover {
+    cursor: pointer;
+    transition: 1s;
+    color: black;
+   }*/
+
 /* Show content boxes when the radio buttons are checked */
 #accordion label + input[type='radio']:checked + .content {
-    display:block;
+    display:flex;
+    justify-content: center;
+    
 }
+
+
 
 
