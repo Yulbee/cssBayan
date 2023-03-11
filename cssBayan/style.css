@@ -24,7 +24,7 @@ width: 100%;
 }
 
 .accordion_wrapper {
-    width: 40%; 
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -38,41 +38,68 @@ h1 {
 }
 #accordion {
     padding:0;
-    }    
+    }
 #accordion li {
     list-style:none;
     width:100%;
-    }    
+    }
+
+    #accordion input {
+        display:none;
+    }
+
 #accordion  li label {
     padding: 1em;
     display:block;
     font-size: 1em;
     border-top: solid 1px rgb(104, 101, 101);
     color:hsl(212, 90%, 65%);
-    }    
+    }
 
-   
-/* Hide the radio buttons */
-#accordion label + input[type='radio'] {
-      display: none;
-}    
+.title-icon {
+    display: flex;
+    justify-content: space-between;
+    }
+
 /* hide content by default */
 #accordion .content {
     display:none;
 }
 
-/*#accordion label:hover {
-    cursor: pointer;
-    transition: 1s;
-    color: black;
-   }*/
+#accordion i {
+    display:none;
+}
 
-/* Show content boxes when the radio buttons are checked */
-#accordion label + input[type='radio']:checked + .content {
+#accordion:hover i {
+    display: block;
+    color: black;
+  }
+
+  #accordion:hover label {
+    color: black;
+    cursor: pointer;
+    transition: 1.5s;
+  }
+
+
+  #accordion input[type="radio"]:checked ~ label {
+    color: rgb(43, 41, 41);
+  }
+
+  #accordion input[type="radio"]:checked ~ .content {
     display:flex;
     justify-content: center;
-    
 }
+
+#accordion li:hover #plus, #accordion input[type="radio"]:checked ~ #plus {
+    transform: rotate(45deg);
+}
+
+
+
+
+
+
 
 
 
